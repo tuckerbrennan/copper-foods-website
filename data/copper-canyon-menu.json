@@ -1,0 +1,569 @@
+{
+  "restaurant": "Copper Canyon",
+  "location": "51 First Avenue, Atlantic Highlands, NJ 07716",
+  "reviewStatus": "Draft transcribed from supplied restaurant menu photos; review before production use",
+  "sourceDate": "2026-10",
+  "lunch": {
+    "title": "Lunch",
+    "hours": "Monday–Friday · 12 PM–4 PM",
+    "source": "IMG_9936.jpeg",
+    "sections": [
+      {
+        "title": "To Start",
+        "items": [
+          [
+            "Homemade Chips with Fire-Roasted Salsa",
+            "Fresh chips with fire-roasted salsa",
+            "$5"
+          ],
+          [
+            "Canyon Guacamole",
+            "Jalapeños, red onion, cilantro and lime",
+            "$9"
+          ],
+          [
+            "Tuna Taquitos",
+            "Seared tuna, avocado, corn tortillas and serrano chile",
+            "$16"
+          ],
+          [
+            "Southwestern Spring Rolls",
+            "Chorizo, beans, jack cheese, Asian slaw and chile sauce",
+            "$14"
+          ],
+          [
+            "Warm Brie",
+            "Roasted garlic, tomato salsa and flour tortillas",
+            "$16"
+          ],
+          [
+            "Chicken Empanadas",
+            "Shredded chicken, jack cheese and blue-cheese chipotle sauce",
+            "$17"
+          ],
+          [
+            "Pork Bites",
+            "Fried marinated pork shoulder, chiles, pickled onion and salsa rustica",
+            "$15"
+          ],
+          [
+            "Copper Street Corn",
+            "Cotija cheese, ancho chile and cilantro",
+            "$8"
+          ],
+          [
+            "Fried Chicken Wings",
+            "Tossed in roasted poblano chile sauce",
+            "$11"
+          ],
+          [
+            "Ancho Grilled Baby Lamb Chops",
+            "Served with pineapple-mango salsa",
+            "$20"
+          ]
+        ]
+      },
+      {
+        "title": "Soups & Salads",
+        "items": [
+          [
+            "Shredded Chicken or Grilled Shrimp Posole Soup",
+            "Lime, cilantro and avocado · Chicken $7 / Shrimp $9",
+            "$7 / $9"
+          ],
+          [
+            "Arugula & Baby Spinach Salad",
+            "Bacon, raisins, pumpkin seeds and basil-parmesan dressing",
+            "$12"
+          ],
+          [
+            "Wild Greens Salad",
+            "Chile pecans and cayenne-soy dressing",
+            "$10"
+          ],
+          [
+            "Jalapeño Caesar Salad",
+            "Romaine, anchovy, Parmesan cheese and ancho croutons",
+            "$12"
+          ]
+        ]
+      },
+      {
+        "title": "Tacos & Fajitas",
+        "items": [
+          [
+            "Shrimp Tacos (2 pcs)",
+            "Corn tortillas, jack cheese, onion, cilantro and chiles",
+            "$15"
+          ],
+          [
+            "Grilled Chicken Tacos (3 pcs)",
+            "Salsa verde, queso fresco, pico de gallo and flour tortillas",
+            "$14"
+          ],
+          [
+            "Grilled Chicken Fajitas",
+            "Tortillas, peppers, onions, guacamole and horseradish crema",
+            "$15"
+          ],
+          [
+            "Canyon Fish Tacos",
+            "Flour tortillas, shredded cabbage, pico de gallo and guacamole",
+            "$18"
+          ],
+          [
+            "Seared Salmon Tacos (3 pcs)",
+            "Corn tortillas and radish-cucumber slaw",
+            "$14"
+          ],
+          [
+            "Steak Fajitas (3 pcs)",
+            "Peppers, onions, flour tortillas, sour cream and horseradish crema",
+            "$17"
+          ]
+        ]
+      },
+      {
+        "title": "Quesadillas & Burgers",
+        "items": [
+          [
+            "Grilled Baby Spinach Quesadilla",
+            "Chopped tomatoes and pineapple-mango salsa",
+            "$12"
+          ],
+          [
+            "Grilled Chicken Quesadilla",
+            "Baby spinach, jack cheese and chopped tomatoes",
+            "$14"
+          ],
+          [
+            "Jalapeño Smashburger",
+            "Two patties, special sauce, onions, American cheese and brioche bun",
+            "$14"
+          ],
+          [
+            "Jalapeño Chicken Smashburger",
+            "Two chicken patties, special sauce, onions, American cheese and brioche bun",
+            "$15"
+          ]
+        ]
+      }
+    ]
+  },
+  "dinner": {
+    "title": "Dinner",
+    "hours": "Monday–Friday evenings · Saturday from 4 PM",
+    "source": [
+      "IMG_9938.jpeg",
+      "IMG_9939.jpeg"
+    ],
+    "sections": [
+      {
+        "title": "Small Plates",
+        "items": [
+          [
+            "Chicken or Shrimp Posole Soup",
+            "Avocado, lime, onion and cilantro · Chicken $9 / Shrimp $11",
+            "$9 / $11"
+          ],
+          [
+            "Original Guacamole",
+            "Avocado, lime, jalapeño and cilantro",
+            "$17"
+          ],
+          [
+            "Tuna Taquitos",
+            "Seared ahi tuna, sweet serrano chile sauce, sliced avocado and corn tortilla",
+            "$16"
+          ],
+          [
+            "Seared Salmon Tacos",
+            "Corn tortillas, radish, cucumber, chipotle sauce and cilantro",
+            "$14"
+          ],
+          [
+            "Roasted Garlic/Chile Shrimp",
+            "Red sauce and roasted potatoes",
+            "$19"
+          ],
+          [
+            "Pork Bites",
+            "Fried marinated pork shoulder, chiles, pickled red onion and salsa rustica",
+            "$18"
+          ],
+          [
+            "Pacifico Calamari",
+            "Beer-battered calamari, chiles, onions and sriracha",
+            "$18"
+          ],
+          [
+            "Agave Shrimp",
+            "Roasted shrimp, baby spinach and jalapeño-agave sauce",
+            "$17"
+          ],
+          [
+            "Wild Greens Salad",
+            "Chile pecans and cayenne-soy dressing",
+            "$10 / $19"
+          ],
+          [
+            "Arugula & Baby Spinach Salad",
+            "Applewood bacon, tomato, pumpkin seeds, currants and basil-parmesan dressing",
+            "$14 / $26"
+          ],
+          [
+            "Jalapeño Caesar Salad",
+            "Ancho chile tortilla croutons and romaine lettuce",
+            "$14 / $27"
+          ],
+          [
+            "Warm Brie",
+            "Roasted garlic, charred tomato salsa and flour tortillas",
+            "$16"
+          ],
+          [
+            "Stuffed Jalapeño Chiles",
+            "Chorizo, applewood-smoked bacon and jack cheese",
+            "$12"
+          ],
+          [
+            "Baby Spinach Quesadilla",
+            "Spinach, jack cheese, tomato and mango-pineapple salsa",
+            "$18"
+          ],
+          [
+            "Crab Cake",
+            "Colossal lump crab, peppers, panko coating and chipotle chile sauce",
+            "$28"
+          ],
+          [
+            "Southwestern Springrolls",
+            "Chorizo sausage, black beans, jack cheese, Asian slaw and sriracha",
+            "$14"
+          ],
+          [
+            "Grilled Baby Lamb Chops",
+            "Ancho chile and mango-pineapple salsa",
+            "$20"
+          ],
+          [
+            "Shrimp Tacos",
+            "Corn tortillas, jack cheese, onion, cilantro and chiles",
+            "$18"
+          ],
+          [
+            "Chicken Empanadas",
+            "Shredded chicken, jack cheese and blue-cheese chipotle sauce",
+            "$17"
+          ],
+          [
+            "Jalapeño Smashburger",
+            "Onions, American cheese, special sauce, brioche bun and pickle",
+            "$17"
+          ],
+          [
+            "Jalapeño Chicken Smashburger",
+            "Chicken version with onions, American cheese, special sauce, brioche bun and pickle",
+            "$17"
+          ]
+        ]
+      },
+      {
+        "title": "Large Plates",
+        "items": [
+          [
+            "Pork Tacos (3 pcs)",
+            "Pineapple, cilantro, chiles, queso fresco, lime, chopped onion and corn tortillas",
+            "$19"
+          ],
+          [
+            "Beef Tacos (3 pcs)",
+            "Salsa verde, chopped onion, lime, cilantro and corn tortillas",
+            "$25"
+          ],
+          [
+            "Grilled Shrimp Quesadilla",
+            "Black beans, fontina cheese, cilantro, árbol chile, guacamole and pickled red onion",
+            "$34"
+          ],
+          [
+            "Grilled Shrimp Tostada",
+            "Jumbo shrimp, black beans, jack cheese, pickled red onion and pico de gallo",
+            "$29"
+          ],
+          [
+            "Fish Tacos",
+            "Panko-crusted cod, lightly fried, guacamole, pico de gallo, spicy cayenne dressing and flour tortillas",
+            "$18"
+          ],
+          [
+            "Shrimp & Chorizo Risotto",
+            "Jumbo shrimp, jalapeño chile risotto, chorizo, sautéed leeks, baby spinach and Parmesan cheese",
+            "$36"
+          ],
+          [
+            "Grilled Tuna & Avocado Salad",
+            "Ahi tuna, wild greens, sesame seeds and wasabi rice vinegar dressing",
+            "$28"
+          ],
+          [
+            "Chorizo Quesadilla",
+            "House-made chorizo, spinach, tomato, caramelized onion, jack cheese and guacamole",
+            "$28"
+          ],
+          [
+            "N.Y. Strip",
+            "Pasilla chile rub",
+            "$58"
+          ],
+          [
+            "Grilled Chicken Quesadilla",
+            "Spinach, caramelized onions, tomato, jack cheese and mango-pineapple salsa",
+            "$28"
+          ],
+          [
+            "Black Bean & Veggie Quesadilla",
+            "Caramelized onion, fontina cheese, spinach, carrots, pumpkin seeds and guacamole",
+            "$26"
+          ],
+          [
+            "Chile Rellenos",
+            "Fried poblano pepper with goat cheese on black beans and shiitake mushrooms, slivered almonds and truffle oil",
+            "$29"
+          ],
+          [
+            "Grilled 16 oz Pork Chop",
+            "With arugula and mango pico de gallo",
+            "$38"
+          ],
+          [
+            "Grilled Fajitas",
+            "Peppers, onions, horseradish crema, guacamole and sour cream · Chicken $30 / Shrimp $33 / Steak $36",
+            "$30 / $33 / $36"
+          ]
+        ]
+      },
+      {
+        "title": "Sides & Salsas",
+        "items": [
+          [
+            "Chips & Charred Tomato Salsa",
+            "",
+            "$6"
+          ],
+          [
+            "Extra Chips or Salsa",
+            "Each",
+            "$1.50"
+          ],
+          [
+            "Pico de Gallo",
+            "",
+            "$6"
+          ],
+          [
+            "Mango & Pineapple Salsa",
+            "",
+            "$6.50"
+          ],
+          [
+            "Copper Street Corn",
+            "",
+            "$9"
+          ],
+          [
+            "Black Beans",
+            "With jack cheese",
+            "$4"
+          ],
+          [
+            "Canyon Fries",
+            "",
+            "$5"
+          ],
+          [
+            "Sautéed Baby Spinach",
+            "",
+            "$5"
+          ],
+          [
+            "Small Guacamole",
+            "",
+            "$9"
+          ]
+        ]
+      }
+    ]
+  },
+  "drinks": {
+    "title": "Drinks",
+    "serving": "Available at lunch and dinner — same selections and prices",
+    "source": "IMG_9940.jpeg",
+    "sections": [
+      {
+        "title": "Specialty Margaritas",
+        "note": "House specialties",
+        "items": [
+          [
+            "The Copper Canyon",
+            "Reposado tequila, fresh lime and agave",
+            "$17"
+          ],
+          [
+            "Across the Street",
+            "Blanco tequila, Cointreau and fresh lime",
+            "$18"
+          ],
+          [
+            "Grand Canyon",
+            "Reposado tequila, Grand Marnier and lime",
+            "$20"
+          ],
+          [
+            "Smokin’",
+            "Reposado tequila infused with jalapeño chiles, fresh lime and agave",
+            "$17"
+          ],
+          [
+            "The Slim",
+            "Blanco tequila, fresh lime, agave and club soda",
+            "$17"
+          ]
+        ]
+      },
+      {
+        "title": "White, Rosé & Sparkling Wines",
+        "note": "Still wines: 6 oz pour. Prices shown by glass / bottle unless noted.",
+        "items": [
+          [
+            "La Luna Prosecco Split",
+            "Individual split",
+            "$10"
+          ],
+          [
+            "Kendall-Jackson Vintner’s Reserve Sauvignon Blanc",
+            "2022",
+            "$14 / $48"
+          ],
+          [
+            "Noble Vines 446 Monterey Chardonnay",
+            "2021",
+            "$15 / $55"
+          ],
+          [
+            "Ruffino Delle Venezie Pinot Grigio",
+            "2021",
+            "$14 / $48"
+          ],
+          [
+            "Rosé",
+            "Bottle only — producer to be confirmed",
+            "$48"
+          ]
+        ]
+      },
+      {
+        "title": "Red Wines",
+        "note": "6 oz pour · Glass / bottle",
+        "items": [
+          [
+            "Gnarly Head Pinot Noir",
+            "2021",
+            "$14 / $48"
+          ],
+          [
+            "Portillo Cabernet Sauvignon",
+            "2021 · Argentina",
+            "$14 / $48"
+          ],
+          [
+            "Leese-Fitch Collection Cabernet Sauvignon",
+            "2020 · Sonoma",
+            "$16 / $55"
+          ]
+        ]
+      },
+      {
+        "title": "Draft Beer & Domestic Cans",
+        "items": [
+          [
+            "Carton Canyon Draft",
+            "6.2% ABV · Our exclusive beer, hand-crafted in Atlantic Highlands",
+            "$7"
+          ],
+          [
+            "Twin Lights Lager",
+            "4.8% ABV",
+            "$7"
+          ],
+          [
+            "Calaveras",
+            "16 oz Mexican lager · 4.5% ABV",
+            "$8"
+          ],
+          [
+            "Follow the Sun",
+            "16 oz Mexican lager · 4.7% ABV",
+            "$8"
+          ]
+        ]
+      },
+      {
+        "title": "Imported Bottled Beer",
+        "note": "$5.50 each",
+        "items": [
+          [
+            "Corona Non-Alcoholic",
+            "Mexico",
+            "$5.50"
+          ],
+          [
+            "Modelo Especial",
+            "Mexico",
+            "$5.50"
+          ],
+          [
+            "Pacífico",
+            "Mexico",
+            "$5.50"
+          ],
+          [
+            "Corona Light",
+            "Mexico",
+            "$5.50"
+          ],
+          [
+            "Sol",
+            "Mexico",
+            "$5.50"
+          ],
+          [
+            "Negra Modelo",
+            "Mexico",
+            "$5.50"
+          ]
+        ]
+      },
+      {
+        "title": "Ready-to-Drink",
+        "items": [
+          [
+            "Surfside",
+            "Vodka and iced tea (listed with bottled selections in source menu)",
+            "$5.50"
+          ]
+        ]
+      }
+    ]
+  },
+  "policies": [
+    "The printed dinner menu states a 3% processing fee on credit cards.",
+    "The printed dinner menu states parties of 6 or more are subject to an automatic 20% gratuity."
+  ],
+  "reviewNotes": [
+    "The dinner Small Plates photo cuts off a portion of a third column at the right edge; only fully legible menu items have been transcribed.",
+    "The drinks photo lists a Rosé bottle for $48 without a clearly legible producer; confirm before production publication.",
+    "Dinner and lunch menu prices differ for several shared dishes; do not merge them.",
+    "Lunch and dinner share one canonical drinks list with identical prices."
+  ]
+}
