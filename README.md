@@ -5,9 +5,13 @@ A mobile-first presentation website for **Copper Canyon**, **Higo**, and **Gasli
 ## Files
 
 - `index.html`: group homepage with venue sections, lunch announcement, and directions
-- `copper-canyon.html`: dedicated Copper Canyon page with menus, reservations, online ordering, gift cards, gallery, hours, directions, and event-contact CTA
+- `copper-canyon.html`: dedicated Copper Canyon page with links to digital menus, reservations, online ordering, gift cards, gallery, hours, directions, and event-contact CTA
+- `copper-canyon-menus.html`: searchable HTML content organized into Lunch, Dinner, and one shared Drinks menu; deep links `#lunch`, `#dinner`, `#drinks`
+- `copper-canyon-menus.css`, `copper-canyon-menus.js`: responsive menu layout and progressive-enhancement selector
+- `data/copper-canyon-menu.json`: structured food and drink source with separate service prices
 - `copper-canyon.css`, `copper-canyon.js`: venue-specific styling and gallery lightbox
 - `docs/copper-canyon-site-audit.md`: detailed crawl of the original site and functional-parity checklist
+- `docs/copper-canyon-menu-transcription.md`: photo sources, reviewed item counts, shared drinks rule, and verification gaps
 - `styles.css`: responsive design system
 - `app.js`: accessible mobile navigation and current copyright year
 
@@ -15,7 +19,15 @@ Built as plain HTML, CSS, and JavaScript; no build step or credentials.
 
 ## Preview
 
-Open `index.html` locally, or enable GitHub Pages under **Settings → Pages** if and when you want a public demo. **GitHub Pages is not enabled by these commits.** This repository is public, so source code is visible on GitHub.
+GitHub Pages is enabled for the `main` branch. Preview URLs:
+
+- https://tuckerbrennan.github.io/copper-foods-website/
+- https://tuckerbrennan.github.io/copper-foods-website/copper-canyon.html
+- https://tuckerbrennan.github.io/copper-foods-website/copper-canyon-menus.html#lunch
+- https://tuckerbrennan.github.io/copper-foods-website/copper-canyon-menus.html#dinner
+- https://tuckerbrennan.github.io/copper-foods-website/copper-canyon-menus.html#drinks
+
+Deployment is asynchronous; Pages URLs may briefly show an old version while the latest commit deploys. The repository and its preview are public.
 
 ## Confirm before public launch
 
@@ -30,6 +42,7 @@ Open `index.html` locally, or enable GitHub Pages under **Settings → Pages** i
 
 1. Review homepage direction with Michael.
 2. Collect approved brand assets and photos.
-3. Test the Copper Canyon page and add separate pages for Higo and Gaslight, plus an events listing.
-4. Verify menus, links, hours, and calls to action.
-5. Set up a separate demo deployment for approval before any domain cutover.
+3. Verify and sign off on the new Copper Canyon lunch, dinner and **shared** drinks menus (see transcription doc); test on mobile.
+4. Add separate pages for Higo and Gaslight, plus an events listing.
+5. Verify links, hours, and calls to action.
+6. Obtain Michael's approval before any restaurant-domain cutover.
