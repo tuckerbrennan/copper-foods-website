@@ -1,0 +1,113 @@
+/* Copper Canyon digital menus — shared venue design */
+.cc-menu-site{background:#faf8f3}
+.cc-menu-site .site-header{z-index:55}
+.digital-hero{color:#fff;position:relative;overflow:hidden;background:radial-gradient(circle at 82% 15%,rgba(181,135,77,.17),transparent 26%),linear-gradient(125deg,#132c24,#25483b 68%,#1b332b);border-bottom:5px solid #c6a46c}
+.digital-hero-content{position:relative;min-height:415px;padding:42px 0 72px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+.digital-breadcrumb{display:flex;align-items:center;gap:14px;font-size:11px;color:#d9dfd7;margin:0 0 57px}
+.digital-breadcrumb a{text-decoration:underline;text-underline-offset:4px}
+.digital-breadcrumb a:hover{color:#e7c88b}
+.digital-hero .eyebrow{color:#debd80;margin-bottom:12px}
+.digital-hero h1{font-size:clamp(62px,7vw,98px);line-height:1.08;letter-spacing:-.05em;margin:0 0 23px}
+.digital-hero h1 em{color:#e7c88b}
+.digital-hero-content>p:not(.eyebrow){font-size:15px;line-height:1.85;max-width:585px;color:#dfe6df;margin:0}
+.digital-hero-sun{position:absolute;right:3%;top:24%;font-family:Georgia,serif;font-size:clamp(130px,19vw,320px);line-height:1;color:rgba(218,181,120,.16);user-select:none;pointer-events:none}
+.digital-menu-tools{position:sticky;top:85px;z-index:25;background:#f7f3ea;border-bottom:1px solid #d9d4c8;box-shadow:0 4px 18px rgba(19,35,29,.06)}
+.digital-menu-tools-inner{display:flex;align-items:stretch;justify-content:space-between;min-height:85px;gap:24px}
+.digital-menu-nav{display:flex;gap:0}
+.digital-menu-link{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:2px;padding:18px 40px 14px 8px;margin-right:35px;font-family:var(--display);font-weight:600;font-size:23px;color:#657268;position:relative;transition:color .2s}
+.digital-menu-link:after{content:"";position:absolute;bottom:-1px;left:8px;right:40px;height:3px;background:transparent}
+.digital-menu-link:hover{color:#1b3c2f}
+.digital-menu-link[aria-current="page"]{color:#1b3c2f}
+.digital-menu-link[aria-current="page"]:after{background:#b38c57}
+.digital-menu-link-meta{font-family:var(--body);font-size:9px;letter-spacing:.13em;font-weight:700;color:#95846a}
+.digital-menu-tools-cta{display:flex;align-items:center}
+.digital-menu-tools-cta a{font-size:12px;font-weight:700;letter-spacing:.03em;white-space:nowrap;border-bottom:1px solid #234936;padding-bottom:4px}
+.digital-menu-tools-cta a span{margin-right:7px;font-size:14px}
+.menu-area{padding-top:38px;padding-bottom:107px}
+.menu-preview-note{padding:14px 19px;border-left:3px solid #ac915f;color:#5c695f;background:#f1ebe0;font-size:11px;line-height:1.8;margin:0 0 65px}
+.menu-preview-note strong{color:#243f31}
+.menu-panel[hidden]{display:none!important}
+.menu-panel{scroll-margin-top:200px}
+.menu-panel-heading{display:flex;justify-content:space-between;align-items:center;gap:30px;margin-bottom:39px}
+.menu-panel-heading .eyebrow{color:#977448;margin-bottom:13px}
+.menu-panel-heading h2{font-size:clamp(53px,6vw,86px);letter-spacing:-.045em;margin-bottom:18px}
+.menu-panel-heading h2::first-letter{color:#234735}
+.menu-panel-heading>div>p:not(.eyebrow){max-width:610px;font-size:15px;color:#667267;line-height:1.9;margin:0}
+.menu-panel-medallion{color:#c7ad80;font-size:93px;font-family:Georgia,serif;font-weight:400;line-height:1;margin-right:25px}
+.menu-shared-drinks{display:flex;align-items:center;justify-content:space-between;gap:26px;padding:24px 30px;background:#e4ebdf;border:1px solid #d3dece;margin-bottom:61px}
+.menu-shared-drinks strong{display:block;font-family:var(--display);font-size:23px;font-weight:500;margin-bottom:6px}
+.menu-shared-drinks p{font-size:13px;color:#5d6f60;line-height:1.65;margin:0;max-width:720px}
+.menu-inline-link{white-space:nowrap;display:inline-flex;gap:20px;border-bottom:1px solid #1b3f30;padding-bottom:4px;font-size:12px;font-weight:700;letter-spacing:.025em}
+.menu-inline-link:hover{color:#97682f}
+.menu-shared-drinks-gold{background:#ede2ca;border-color:#e1cba8}
+.menu-shared-drinks-gold p{color:#6c624e}
+.digital-category{margin-bottom:79px;scroll-margin-top:210px}
+.digital-category-heading{display:flex;align-items:flex-end;gap:25px;margin-bottom:30px}
+.digital-category-heading>div{min-width:0}
+.digital-category-num{font-size:10px;letter-spacing:.17em;color:#997849;font-weight:700;margin:0 0 8px}
+.digital-category-heading h3{font-size:clamp(35px,3.3vw,51px);letter-spacing:-.025em;line-height:1.22;margin:0}
+.digital-category-rule{height:1px;background:#cabd9f;flex:1;margin-bottom:14px;min-width:30px}
+.digital-category-note{font-size:12px;line-height:1.7;color:#727d71;margin:10px 0 0}
+.digital-items{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:70px;row-gap:0}
+.digital-item{padding:19px 0 21px;border-bottom:1px solid #deddd4;min-width:0}
+.digital-item-top{display:flex;align-items:baseline;gap:16px;justify-content:space-between}
+.digital-item h4{font-family:var(--display);font-size:clamp(19px,1.9vw,26px);font-weight:500;letter-spacing:-.018em;line-height:1.31;margin:0;min-width:0}
+.digital-price{font-family:var(--body);font-size:13px;white-space:nowrap;letter-spacing:0;font-weight:700;color:#2d4c39;flex-shrink:0}
+.digital-item>p{font-size:12px;line-height:1.75;color:#68746b;max-width:530px;margin:8px 0 0}
+.menu-service-note{margin:18px 0 40px;padding:26px 31px;background:#f0ece3;border-left:3px solid #c0a16d}
+.menu-service-note strong{font-family:var(--display);font-size:20px;font-weight:500}
+.menu-service-note p{font-size:13px;color:#677167;line-height:1.85;margin:6px 0 0}
+.digital-menu-outro{background:#254638;color:#fff}
+.digital-menu-outro-inner{padding:78px 0;display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center}
+.digital-menu-outro .eyebrow{color:#c3b38e}
+.digital-menu-outro h2{font-size:clamp(47px,5vw,75px);letter-spacing:-.04em;margin:0}
+.digital-menu-outro h2 em{color:#dcb782}
+.digital-menu-outro-inner>div:last-child>p{color:#e3e9e0;max-width:460px;font-size:15px;line-height:1.9;margin:0 0 26px}
+.digital-menu-actions{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.digital-menu-order{font-size:12px;font-weight:700;border-bottom:1px solid #cfdacb;padding-bottom:5px}
+@media(max-width:1100px){
+ .digital-hero-content{min-height:370px}
+ .digital-menu-link{padding-right:17px;margin-right:20px}
+ .digital-menu-link:after{right:17px}
+ .digital-items{column-gap:42px}
+ .digital-item h4{font-size:21px}
+}
+@media(max-width:760px){
+ .digital-hero-content{min-height:340px;padding:27px 0 53px}
+ .digital-breadcrumb{margin-bottom:45px;font-size:10px}
+ .digital-hero .eyebrow{font-size:10px}
+ .digital-hero h1{font-size:clamp(56px,11.3vw,82px)}
+ .digital-hero-content>p:not(.eyebrow){font-size:13px}
+ .digital-hero-sun{right:-20px;top:125px;font-size:140px}
+ .digital-menu-tools{top:69px}
+ .digital-menu-tools-inner{min-height:72px}
+ .digital-menu-nav{width:100%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+ .digital-menu-link{align-items:center;font-size:20px;padding:12px 7px;margin-right:0}
+ .digital-menu-link:after{right:8px}
+ .digital-menu-link-meta{font-size:8px}
+ .digital-menu-tools-cta{display:none}
+ .menu-area{padding-top:23px;padding-bottom:65px}
+ .menu-preview-note{font-size:10px;padding:12px 14px;margin-bottom:45px}
+ .menu-panel-heading{gap:8px;margin-bottom:28px}
+ .menu-panel-heading h2{font-size:clamp(48px,9vw,70px)}
+ .menu-panel-heading .eyebrow{font-size:10px}
+ .menu-panel-heading>div>p:not(.eyebrow){font-size:13px}
+ .menu-panel-medallion{font-size:55px;margin-right:0}
+ .menu-shared-drinks{flex-direction:column;align-items:flex-start;padding:19px;gap:15px;margin-bottom:47px}
+ .menu-shared-drinks strong{font-size:21px}
+ .menu-shared-drinks p{font-size:12px}
+ .digital-category{margin-bottom:48px}
+ .digital-category-heading{margin-bottom:14px}
+ .digital-category-heading h3{font-size:37px}
+ .digital-items{grid-template-columns:1fr}
+ .digital-item{padding:16px 0 18px}
+ .digital-item h4{font-size:21px}
+ .digital-item>p{font-size:12px;line-height:1.7}
+ .digital-price{font-size:13px}
+ .menu-service-note{padding:20px}
+ .digital-menu-outro-inner{grid-template-columns:1fr;padding:60px 0;gap:24px}
+ .digital-menu-outro h2{font-size:clamp(48px,9vw,65px)}
+ .digital-menu-outro-inner>div:last-child>p{font-size:13px}
+}
+@media(max-width:390px){.digital-menu-link{font-size:18px}.digital-price{font-size:12px}.digital-item h4{font-size:19px}.digital-item-top{gap:10px}.menu-panel-medallion{display:none}}
+@media(prefers-reduced-motion:reduce){.digital-menu-link{transition:none}}
