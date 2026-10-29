@@ -1,0 +1,142 @@
+/* Copper Canyon visual identity — source: existing restaurant website assets
+   and the restaurant's printed menu/logo supplied for the project.
+   Scope intentionally limited to Copper Canyon pages, not Higo or Gaslight.
+   Review by management before production launch.
+*/
+.cc-site,.cc-menu-site{
+  --pine:#31201e;
+  --pine-deep:#241a18;
+  --sage:#b38a7c;
+  --cream:#f8f1e8;
+  --paper:#f2e8dc;
+  --ink:#2e2420;
+  --muted:#6c5b54;
+  --gold:#d6a183;
+  --border:rgba(68,42,37,.2);
+  --display:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  background:#faf6ef;
+  color:#2d2320;
+}
+.cc-site .site-header,.cc-menu-site .site-header{background:#241a18;border-bottom:1px solid rgba(219,173,143,.26)}
+.cc-site .wordmark-symbol span,.cc-menu-site .wordmark-symbol span{background:#b87969}
+.cc-site .header-cta,.cc-menu-site .header-cta{border-color:#c6967a}
+.cc-site .header-cta:hover,.cc-menu-site .header-cta:hover{color:#f2be9c}
+.cc-site .desktop-nav a:hover,.cc-menu-site .desktop-nav a:hover{color:#d6a183}
+.cc-site .button-dark,.cc-menu-site .button-dark{background:#6c3b34}
+.cc-site .button-dark:hover,.cc-menu-site .button-dark:hover{background:#914c40}
+.cc-site .text-link:hover,.cc-menu-site .text-link:hover{color:#8f4b41}
+.cc-site .eyebrow,.cc-menu-site .eyebrow{color:#814a40}
+.cc-site h1,.cc-menu-site h1{font-weight:500}
+.cc-site h2,.cc-menu-site h2{font-weight:500}
+.cc-site .cc-hero{background:#2b1c19;min-height:740px}
+.cc-site .cc-hero-content{min-height:740px;padding-top:65px;padding-bottom:64px}
+.cc-site .cc-hero-photo img{filter:saturate(.87) contrast(1.04)}
+.cc-site .cc-hero-shade{background:linear-gradient(90deg,rgba(36,20,19,.96) 0%,rgba(37,22,19,.83) 35%,rgba(44,25,22,.2) 90%),linear-gradient(0deg,rgba(35,20,16,.35),transparent 45%)}
+.cc-site .cc-kicker{color:#e9bc9d}
+.cc-site .cc-kicker span{background:#d9a88a}
+.cc-site .cc-hero h1{font-size:clamp(70px,7.4vw,117px)}
+.cc-site .cc-hero h1 em{color:#e5b393}
+.cc-site .cc-hero-content>p:not(.cc-kicker){color:#efe2d5}
+.cc-site .cc-hero-meta{color:#f2dbca}
+.cc-site .cc-button-outline{background:rgba(44,24,21,.3)}
+.cc-site .cc-button-outline:hover{background:rgba(255,235,210,.15)}
+.cc-site .cc-lunch{background:#c28e75;color:#211817;border-top:1px solid #b37865;border-bottom:1px solid #b37865}
+.cc-site .cc-lunch .eyebrow{color:#50291f}
+.cc-site .cc-sun{color:#64352c}
+.cc-site .cc-lunch h2 em{color:#643a31}
+.cc-site .cc-intro .eyebrow{color:#8d4a40}
+.cc-site .cc-intro h2 em{color:#9b594e}
+.cc-site .cc-intro-copy p{color:#6a5a51}
+.cc-site .cc-menu-section{background:#eee3d5}
+.cc-site .cc-section-head .eyebrow{color:#905144}
+.cc-site .cc-section-head h2 em{color:#a36759}
+.cc-site .cc-section-head>p{color:#665950}
+.cc-site .cc-menu-card{background:#fffbf5;box-shadow:0 8px 24px rgba(56,31,25,.035)}
+.cc-site .cc-menu-number{color:#9b584b}
+.cc-site .cc-menu-card p{color:#6c5c53}
+.cc-site .cc-menu-card a,.cc-site .cc-actions a:not(.cc-action-secondary){border-color:#9f6555}
+.cc-site .cc-menu-note{color:#736357}
+.cc-site .cc-actions{background:#faf6ef}
+.cc-site .cc-action-icon{color:#8f4b40;border-color:#9c6459}
+.cc-site .cc-actions .eyebrow{color:#8a5146}
+.cc-site .cc-actions p:not(.eyebrow){color:#6c5a52}
+.cc-site .cc-drinks-copy{background:#482820}
+.cc-site .cc-drinks .eyebrow{color:#e0ae8e}
+.cc-site .cc-drinks h2 em{color:#e5b393}
+.cc-site .cc-drinks p:not(.eyebrow){color:#f1e2d9}
+.cc-site .cc-gallery .cc-section-head h2 em{color:#9b594e}
+.cc-site .cc-events{background:#4b2c27}
+.cc-site .cc-events .eyebrow{color:#ebba97}
+.cc-site .cc-events h2 em{color:#ebbc9a}
+.cc-site .cc-events-inner>div:last-child>p:first-child{color:#f2e5db}
+.cc-site .cc-events .cc-events-note{color:#dcc2af}
+.cc-site .cc-visit-grid .eyebrow{color:#99574a}
+.cc-site .cc-visit-grid p{color:#766157}
+.cc-site .cc-visit-grid .cc-fineprint{color:#8b7b71}
+.cc-site .cc-visit-grid h3 a:hover,.cc-site .cc-socials a:hover{color:#954f43}
+.cc-site .cc-takeout-row p{color:#6c5b53}
+.cc-site .cc-lightbox{background:rgba(29,15,13,.95)}
+.cc-site .cc-lightbox-panel p{color:#e6d7ca}
+.cc-site .site-footer,.cc-menu-site .site-footer{background:#241a18}
+.cc-site .footer-links strong,.cc-menu-site .footer-links strong{color:#daa48c}
+.cc-site .footer-links a:hover,.cc-menu-site .footer-links a:hover{color:#f1bc9c}
+.cc-site .footer-main p,.cc-menu-site .footer-main p{color:#d9c5b8}
+.cc-site .footer-bottom,.cc-menu-site .footer-bottom{color:#c1a899}
+/* Brand sign mounted over the photography: original logo retains its proportions. */
+.cc-brand-plate{display:flex;align-items:center;justify-content:center;background:#f6eee4;border:1px solid rgba(221,187,159,.65);padding:9px 12px;width:145px;height:126px;margin:0 0 23px;box-shadow:0 8px 28px rgba(16,9,6,.19)}
+.cc-brand-plate img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply}
+.cc-brand-plate .cc-brand-fallback{font:italic 32px/1.1 var(--display);color:#6e3934;text-align:center}
+.cc-brand-plate-small{position:absolute;top:75px;right:50px;width:132px;height:117px;margin:0;padding:8px;background:#fff8ee}
+.cc-brand-plate-small img{mix-blend-mode:multiply}
+/* Dedicated digital menus. */
+.cc-menu-site .digital-hero{background:radial-gradient(circle at 86% 15%,rgba(197,133,96,.18),transparent 34%),linear-gradient(120deg,#2d1a18,#60372d 76%,#3d2521);border-bottom:5px solid #af735a}
+.cc-menu-site .digital-hero .eyebrow{color:#f1c6a2}
+.cc-menu-site .digital-hero h1 em{color:#eab897}
+.cc-menu-site .digital-hero-content>p:not(.eyebrow){color:#f0dfd4}
+.cc-menu-site .digital-hero-sun{color:rgba(226,174,134,.09);right:15%}
+.cc-menu-site .digital-breadcrumb{color:#e5d4c5}
+.cc-menu-site .digital-breadcrumb a:hover{color:#efb995}
+.cc-menu-site .digital-menu-tools{background:#f4eadf;border-color:#d7c1ad}
+.cc-menu-site .digital-menu-link{color:#7d655c}
+.cc-menu-site .digital-menu-link:hover,.cc-menu-site .digital-menu-link[aria-current="page"]{color:#63352e}
+.cc-menu-site .digital-menu-link[aria-current="page"]:after{background:#ab6957}
+.cc-menu-site .digital-menu-link-meta{color:#9d7968}
+.cc-menu-site .digital-menu-tools-cta a{border-color:#81483d}
+.cc-menu-site .menu-preview-note{background:#f4e6d8;color:#765d50;border-color:#ad7660}
+.cc-menu-site .menu-preview-note strong{color:#633a30}
+.cc-menu-site .menu-panel-heading .eyebrow{color:#8c4c42}
+.cc-menu-site .menu-panel-heading h2::first-letter{color:#8e5447}
+.cc-menu-site .menu-panel-heading>div>p:not(.eyebrow){color:#706158}
+.cc-menu-site .menu-panel-medallion{color:#c39b80}
+.cc-menu-site .menu-shared-drinks{background:#f4e6dc;border-color:#e5cbbc}
+.cc-menu-site .menu-shared-drinks strong{color:#68392e}
+.cc-menu-site .menu-shared-drinks p{color:#735d53}
+.cc-menu-site .menu-shared-drinks-gold{background:#eee0cb;border-color:#dec19e}
+.cc-menu-site .menu-inline-link{border-color:#8b4c40}
+.cc-menu-site .digital-category-num{color:#8e5145}
+.cc-menu-site .digital-category-rule{background:#d7bba4}
+.cc-menu-site .digital-category-note{color:#79675d}
+.cc-menu-site .digital-item{border-color:#e4d9cf}
+.cc-menu-site .digital-item h4{color:#30221e}
+.cc-menu-site .digital-item>p{color:#76665c}
+.cc-menu-site .digital-price{color:#8f5143}
+.cc-menu-site .menu-service-note{background:#f1e7db;border-color:#bc846e}
+.cc-menu-site .menu-service-note p{color:#706157}
+.cc-menu-site .digital-menu-outro{background:#492c25}
+.cc-menu-site .digital-menu-outro .eyebrow{color:#ebc09f}
+.cc-menu-site .digital-menu-outro h2 em{color:#e8b895}
+.cc-menu-site .digital-menu-outro-inner>div:last-child>p{color:#f3e5da}
+@media(max-width:760px){
+ .cc-brand-plate{width:115px;height:103px;margin-bottom:24px}
+ .cc-site .cc-hero,.cc-site .cc-hero-content{min-height:720px}
+ .cc-site .cc-hero-content{padding-top:60px;padding-bottom:88px}
+ .cc-site .cc-hero h1{font-size:clamp(59px,10.8vw,85px)}
+ .cc-site .cc-hero-shade{background:linear-gradient(90deg,rgba(36,20,19,.91),rgba(45,24,20,.71)),linear-gradient(0deg,rgba(27,17,15,.3),transparent)}
+ .cc-brand-plate-small{width:85px;height:80px;top:40px;right:8px}
+ .cc-menu-site .digital-hero-sun{display:none}
+ .cc-menu-site .digital-hero-content{min-height:354px}
+}
+@media(max-width:390px){
+ .cc-site .cc-hero h1{font-size:55px}
+ .cc-brand-plate-small{width:67px;height:64px;top:38px;right:0}
+}
