@@ -133,3 +133,9 @@
 }
 @media(max-width:390px){.cc-hero h1{font-size:52px}.cc-hero-meta{font-size:8px}.cc-lunch h2{font-size:35px}.cc-sun{font-size:37px}.cc-drinks h2{font-size:52px}}
 @media(prefers-reduced-motion:reduce){.cc-gallery-tile img{transition:none}}
+
+/* Legacy takeout handoff while the menu ordering system is verified. */
+.cc-takeout-row{display:flex;align-items:center;justify-content:space-between;gap:25px;border-top:1px solid rgba(29,46,34,.2);margin-top:36px;padding-top:23px}
+.cc-takeout-row p{margin:0;max-width:680px;font-size:13px;line-height:1.75;color:#5e6b60}
+.cc-takeout-row .text-link{white-space:nowrap}
+@media(max-width:760px){.cc-takeout-row{flex-direction:column;align-items:flex-start;gap:15px}}
