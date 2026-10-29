@@ -2,10 +2,6 @@ name: Archive Copper Canyon public website images
 
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - '.github/workflows/archive-copper-canyon.yml'
-      - 'scripts/archive_copper_canyon_assets.py'
 
 permissions:
   contents: read
