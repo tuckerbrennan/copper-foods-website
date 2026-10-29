@@ -10,8 +10,10 @@ A mobile-first presentation website for **Copper Canyon**, **Higo**, and **Gasli
 - `copper-canyon-menus.css`, `copper-canyon-menus.js`: responsive menu layout and progressive-enhancement selector
 - `data/copper-canyon-menu.json`: structured food and drink source with separate service prices
 - `copper-canyon.css`, `copper-canyon.js`: venue-specific styling and gallery lightbox
+- `copper-canyon-theme.css`: copper-red, espresso and parchment theme shared by Copper Canyon's page and its digital menus
 - `docs/copper-canyon-site-audit.md`: detailed crawl of the original site and functional-parity checklist
 - `docs/copper-canyon-menu-transcription.md`: photo sources, reviewed item counts, shared drinks rule, and verification gaps
+- `docs/copper-canyon-theme-and-assets.md`: brand palette, original Wix image references and Google Drive media-migration status
 - `styles.css`: responsive design system
 - `app.js`: accessible mobile navigation and current copyright year
 
@@ -31,7 +33,7 @@ Deployment is asynchronous; Pages URLs may briefly show an old version while the
 
 ## Confirm before public launch
 
-- **Photography:** Food, drinks and restaurant photos currently come from Unsplash and are **illustrative placeholders**; they are not photos of the restaurants. Replace with approved restaurant photography.
+- **Photography:** Copper Canyon's page now references several original images from its Wix-hosted website, with Unsplash fallbacks. These are external **hotlinks, not downloaded images**. The original Wix photo archive has **not** been transferred to Drive because source-image downloads are blocked. An inventory of original CDN URLs, the user-supplied transparent logo, and a menu-brand reference were saved in the correct personal Google Drive account (link in the theme & assets document). Higo and Gaslight still use illustrative placeholders. Obtain approved full-quality local photos before launch.
 - **Brand identity:** Replace the draft text wordmark and add the real transparent restaurant logos.
 - **Facts:** Confirm addresses, operating hours, copy, phone, menu availability, and reservation links with Michael. Current draft lists Copper Canyon and Higo at 51 First Avenue; Gaslight at 33 First Avenue.
 - **Functional parity:** Copper Canyon now provides external links for booking, ordering, and gift cards, but checkout, reservation availability, and the Yelp URL remain **untested**. The old contact/private-party form has **not yet been migrated** because its delivery destination is unknown; the new page provides a working telephone CTA in the meantime.
