@@ -12,6 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="copper-foods-presentation.css">
   <script src="app.js" defer></script>
 </head>
 <body>
@@ -54,15 +55,15 @@
         </div>
         <div class="hero-photos" aria-label="Three restaurant experiences">
           <a class="hero-photo hero-photo-one" href="#copper-canyon">
-            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=85" alt="Warmly lit restaurant dining room — illustrative photography">
+            <img src="assets/copper-canyon/dining-room.jpg" alt="Tables set inside Copper Canyon">
             <span><strong>Copper Canyon</strong><small>Southwestern dining</small></span>
           </a>
-          <a class="hero-photo hero-photo-two" href="#higo">
-            <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=800&q=85" alt="Assorted sushi on a plate — illustrative photography">
+          <a class="hero-photo hero-photo-two hero-brand-panel hero-brand-higo" href="#higo">
+            <div class="hero-identity" aria-hidden="true">HIGO</div>
             <span><strong>Higo</strong><small>Japanese cuisine</small></span>
           </a>
-          <a class="hero-photo hero-photo-three" href="#gaslight">
-            <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=800&q=85" alt="Inviting bar interior — illustrative photography">
+          <a class="hero-photo hero-photo-three hero-brand-panel hero-brand-gaslight" href="#gaslight">
+            <div class="hero-identity" aria-hidden="true">GASLIGHT</div>
             <span><strong>Gaslight</strong><small>Good times, local flavor</small></span>
           </a>
         </div>
@@ -79,7 +80,7 @@
       <div class="restaurant-grid">
         <article class="restaurant-card" id="copper-canyon">
           <a class="restaurant-image" href="copper-canyon.html" aria-label="Explore Copper Canyon">
-            <img src="https://static.wixstatic.com/media/e63476_a669cc2403014a5e8ad4366bf65b64a6~mv2.jpg" alt="Copper Canyon dining room, from the restaurant's original website" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=85';this.alt='Temporary illustrative restaurant photo'" loading="lazy">
+            <img src="assets/copper-canyon/exterior.jpg" alt="Copper Canyon and First Avenue at dusk" loading="lazy">
             <span class="number">01 / 03</span>
           </a>
           <div class="restaurant-card-body">
@@ -91,7 +92,7 @@
         </article>
         <article class="restaurant-card" id="higo">
           <a class="restaurant-image" href="#higo-feature" aria-label="Explore Higo">
-            <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&w=900&q=85" alt="Beautifully prepared sushi — illustrative photograph" loading="lazy">
+            <div class="venue-art venue-art-higo" aria-hidden="true"><span class="venue-art-name">Higo</span><span class="venue-art-caption">JAPANESE DINING &amp; COCKTAILS</span></div>
             <span class="number">02 / 03</span>
           </a>
           <div class="restaurant-card-body">
@@ -103,7 +104,7 @@
         </article>
         <article class="restaurant-card" id="gaslight">
           <a class="restaurant-image" href="#gaslight-feature" aria-label="Explore Gaslight">
-            <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=900&q=85" alt="Burger at a casual restaurant — illustrative photograph" loading="lazy">
+            <div class="venue-art venue-art-gaslight" aria-hidden="true"><span class="venue-art-name">Gaslight</span><span class="venue-art-caption">33 FIRST AVENUE</span></div>
             <span class="number">03 / 03</span>
           </a>
           <div class="restaurant-card-body">
@@ -118,7 +119,7 @@
 
     <section class="feature feature-copper" id="copper-feature" aria-labelledby="copper-heading">
       <div class="feature-photo">
-        <img src="https://images.unsplash.com/photo-1513558161293-cdaf765edfd4?auto=format&fit=crop&w=1250&q=85" alt="Cocktail with citrus garnish — illustrative photograph" loading="lazy">
+        <img src="assets/copper-canyon/plated-specialty.jpg" alt="A plated Southwestern dish photographed at Copper Canyon" loading="lazy">
         <span class="image-caption">GOOD THINGS HAPPEN AROUND A TABLE.</span>
       </div>
       <div class="feature-copy">
@@ -133,8 +134,8 @@
     </section>
 
     <section class="feature feature-higo reverse" id="higo-feature" aria-labelledby="higo-heading">
-      <div class="feature-photo">
-        <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=1250&q=85" alt="Japanese sushi presentation — illustrative photograph" loading="lazy">
+      <div class="feature-photo feature-art feature-art-higo" aria-label="Higo restaurant">
+        <div class="feature-art-content"><span>ATLANTIC HIGHLANDS</span><strong>HIGO</strong><i></i><span>JAPANESE CUISINE · COCKTAILS</span></div>
         <span class="image-caption">AN EVENING WITH A DIFFERENT POINT OF VIEW.</span>
       </div>
       <div class="feature-copy">
@@ -150,8 +151,8 @@
     </section>
 
     <section class="feature feature-gaslight" id="gaslight-feature" aria-labelledby="gaslight-heading">
-      <div class="feature-photo">
-        <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1250&q=85" alt="Pub and bar atmosphere — illustrative photograph" loading="lazy">
+      <div class="feature-photo feature-art feature-art-gaslight" aria-label="Gaslight restaurant">
+        <div class="feature-art-content"><span>33 FIRST AVENUE</span><strong>GASLIGHT</strong><i></i><span>CRAFT BEER · FOOD · MUSIC</span></div>
         <span class="image-caption">YOUR NIGHT. YOUR PEOPLE. YOUR PLACE.</span>
       </div>
       <div class="feature-copy">
@@ -189,6 +190,6 @@
     </section>
   </main>
 
-  <footer class="site-footer"><div class="shell footer-main"><div><a class="wordmark footer-wordmark" href="#top"><span class="wordmark-symbol" aria-hidden="true"><span></span><span></span><span></span></span><span>COPPER <em>FOODS</em></span></a><p>Three experiences. One neighborhood.<br>Atlantic Highlands, New Jersey.</p></div><div class="footer-links"><div><strong>EXPLORE</strong><a href="copper-canyon.html">Copper Canyon</a><a href="#higo">Higo</a><a href="#gaslight">Gaslight</a></div><div><strong>CONNECT</strong><a href="https://linktr.ee/copperfoods" target="_blank" rel="noopener noreferrer">Social &amp; updates ↗</a><a href="#visit">Visit us</a></div></div></div><div class="shell footer-bottom"><span>© <span id="year">2026</span> Copper Foods · Atlantic Highlands, NJ</span><span>Website concept · review before public launch</span></div></footer>
+  <footer class="site-footer"><div class="shell footer-main"><div><a class="wordmark footer-wordmark" href="#top"><span class="wordmark-symbol" aria-hidden="true"><span></span><span></span><span></span></span><span>COPPER <em>FOODS</em></span></a><p>Three experiences. One neighborhood.<br>Atlantic Highlands, New Jersey.</p></div><div class="footer-links"><div><strong>EXPLORE</strong><a href="copper-canyon.html">Copper Canyon</a><a href="#higo">Higo</a><a href="#gaslight">Gaslight</a></div><div><strong>CONNECT</strong><a href="https://linktr.ee/copperfoods" target="_blank" rel="noopener noreferrer">Social &amp; updates ↗</a><a href="#visit">Visit us</a></div></div></div><div class="shell footer-bottom"><span>© <span id="year">2026</span> Copper Foods · Atlantic Highlands, NJ</span><span>Atlantic Highlands · New Jersey</span></div></footer>
 </body>
 </html>
