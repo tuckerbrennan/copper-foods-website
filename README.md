@@ -11,6 +11,8 @@ A mobile-first presentation website for **Copper Canyon**, **Higo**, and **Gasli
 - `data/copper-canyon-menu.json`: structured food and drink source with separate service prices
 - `copper-canyon.css`, `copper-canyon.js`: venue-specific styling and gallery lightbox
 - `copper-canyon-theme.css`: copper-red, espresso and parchment theme shared by Copper Canyon's page and its digital menus
+- `copper-foods-presentation.css`: photo-free branded typography for the Higo and Gaslight portions of the group homepage
+- `assets/copper-canyon/`: 14 locally hosted, genuine restaurant images and their source manifest (no external image dependencies)
 - `docs/copper-canyon-site-audit.md`: detailed crawl of the original site and functional-parity checklist
 - `docs/copper-canyon-menu-transcription.md`: photo sources, reviewed item counts, shared drinks rule, and verification gaps
 - `docs/copper-canyon-theme-and-assets.md`: brand palette, original Wix image references and Google Drive media-migration status
@@ -33,8 +35,8 @@ Deployment is asynchronous; Pages URLs may briefly show an old version while the
 
 ## Confirm before public launch
 
-- **Photography:** Copper Canyon's page now references several original images from its Wix-hosted website, with Unsplash fallbacks. These are external **hotlinks, not downloaded images**. The original Wix photo archive has **not** been transferred to Drive because source-image downloads are blocked. An inventory of original CDN URLs, the user-supplied transparent logo, and a menu-brand reference were saved in the correct personal Google Drive account (link in the theme & assets document). Higo and Gaslight still use illustrative placeholders. Obtain approved full-quality local photos before launch.
-- **Brand identity:** Replace the draft text wordmark and add the real transparent restaurant logos.
+- **Photography:** The latest presentation uses **only real Copper Canyon photos and the original horseshoe logo** taken from the restaurant's former website. Fourteen source files are stored locally in `assets/copper-canyon/` and can be served without Wix or stock-photo hotlinks. The personal Drive archive holds 32 original files and a verification CSV. There are **no stock-photo placeholders** anywhere in the served homepage, Copper Canyon page, or digital menus. Higo and Gaslight use intentionally image-free graphic panels until their own restaurant photography is supplied. Confirm the restaurant's right to reuse its existing-site photographs before launch.
+- **Brand identity:** Copper Canyon now displays the horseshoe logo recovered from its own public website. The Copper Foods umbrella wordmark remains a draft; official Higo and Gaslight logos still need to be added or approved.
 - **Facts:** Confirm addresses, operating hours, copy, phone, menu availability, and reservation links with Michael. Current draft lists Copper Canyon and Higo at 51 First Avenue; Gaslight at 33 First Avenue.
 - **Functional parity:** Copper Canyon now provides external links for booking, ordering, and gift cards, but checkout, reservation availability, and the Yelp URL remain **untested**. The old contact/private-party form has **not yet been migrated** because its delivery destination is unknown; the new page provides a working telephone CTA in the meantime.
 - **Links:** Copper Canyon's website and Copper Foods / Gaslight Linktree pages are linked. Add independently verified direct menu and reservation URLs.
@@ -43,7 +45,7 @@ Deployment is asynchronous; Pages URLs may briefly show an old version while the
 ## Proposed roadmap
 
 1. Review homepage direction with Michael.
-2. Collect approved brand assets and photos.
+2. Obtain Michael's approval to reuse the locally archived Copper Canyon images and collect separate Higo/Gaslight photography.
 3. Verify and sign off on the new Copper Canyon lunch, dinner and **shared** drinks menus (see transcription doc); test on mobile.
 4. Add separate pages for Higo and Gaslight, plus an events listing.
 5. Verify links, hours, and calls to action.
