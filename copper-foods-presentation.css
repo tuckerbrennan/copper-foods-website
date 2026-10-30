@@ -1,0 +1,57 @@
+/* Copper Foods presentation visuals.
+   Higo and Gaslight receive illustrated-by-CSS typography, not stock photos,
+   until the restaurants provide approved imagery. Copper Canyon imagery comes
+   exclusively from the original restaurant site's archived, local assets. */
+.hero-brand-panel{display:block;background:#1e302b;isolation:isolate}
+.hero-brand-panel:before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none}
+.hero-brand-higo{background:#203a36}
+.hero-brand-higo:before{background:radial-gradient(circle at 75% 32%,rgba(201,180,140,.14) 0,transparent 53%),repeating-linear-gradient(135deg,transparent 0,transparent 30px,rgba(255,255,255,.025) 31px,transparent 32px)}
+.hero-brand-gaslight{background:#483025}
+.hero-brand-gaslight:before{background:radial-gradient(circle at 23% 24%,rgba(245,189,126,.23),transparent 44%),radial-gradient(circle at 91% 81%,rgba(243,174,100,.1),transparent 40%),linear-gradient(120deg,rgba(42,23,17,.25),transparent)}
+.hero-brand-panel:after{background:linear-gradient(0deg,rgba(11,16,14,.84),transparent 58%)}
+.hero-identity{position:absolute;inset:15% 5% 35%;display:flex;align-items:center;justify-content:center;text-align:center;font-family:var(--display);font-size:clamp(43px,5vw,78px);font-weight:500;line-height:1;letter-spacing:.04em;color:#f1e9d9;z-index:2;opacity:.92;border:1px solid rgba(255,255,255,.13);margin:5px}
+.hero-brand-higo .hero-identity{font-size:clamp(49px,5.9vw,91px);letter-spacing:.15em;text-indent:.15em}
+.hero-brand-gaslight .hero-identity{font-size:clamp(34px,3.9vw,63px);letter-spacing:.02em}
+.hero-brand-panel:hover .hero-identity{color:#fff}
+.venue-art{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:11px;text-align:center;padding:26px;overflow:hidden}
+.venue-art:before{content:"";position:absolute;inset:19px;border:1px solid rgba(255,255,255,.27);pointer-events:none}
+.venue-art-name{position:relative;display:block;font-family:var(--display);font-size:clamp(50px,5vw,80px);font-weight:500;line-height:1.12;color:#f8f3e7;letter-spacing:-.035em}
+.venue-art-caption{position:relative;font-size:10px;font-weight:700;letter-spacing:.16em;line-height:1.6;color:#eee3d2}
+.venue-art-higo{background:radial-gradient(circle at 35% 33%,rgba(221,203,160,.18),transparent 48%),linear-gradient(135deg,#274c43,#122d28)}
+.venue-art-higo .venue-art-name{letter-spacing:.04em;font-size:clamp(56px,5.3vw,83px)}
+.venue-art-gaslight{background:radial-gradient(circle at 72% 27%,rgba(211,146,79,.3),transparent 45%),linear-gradient(130deg,#68412d,#2f211d)}
+.venue-art-gaslight .venue-art-name{font-size:clamp(47px,4.8vw,73px)}
+.restaurant-image .number{z-index:3}
+.restaurant-image:hover .venue-art-name{transform:scale(1.035)}
+.venue-art-name{transition:transform .35s}
+.feature-art{display:flex;align-items:center;justify-content:center;isolation:isolate;text-align:center;color:white;overflow:hidden}
+.feature-art:before{content:"";position:absolute;inset:24px;border:1px solid rgba(255,255,255,.19);pointer-events:none}
+.feature-art:after{content:"";position:absolute;width:min(65vw,540px);height:min(65vw,540px);border:1px solid rgba(255,255,255,.14);border-radius:50%;pointer-events:none}
+.feature-art-higo{background:radial-gradient(circle at 65% 30%,#496b5f 0,#193b34 62%,#122c27 100%)}
+.feature-art-gaslight{background:radial-gradient(circle at 50% 34%,#966c43 0,#4d2e23 56%,#211b18 100%)}
+.feature-art-content{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:22px;max-width:90%;text-align:center}
+.feature-art-content>span{display:block;font-size:11px;letter-spacing:.24em;font-weight:700;color:#f4e8d7}
+.feature-art-content>strong{display:block;font-family:var(--display);font-size:clamp(80px,11vw,170px);line-height:.95;letter-spacing:-.035em;font-weight:500;color:#fff9ea}
+.feature-art-higo .feature-art-content>strong{letter-spacing:.09em;text-indent:.09em}
+.feature-art-gaslight .feature-art-content>strong{font-size:clamp(65px,8.5vw,138px)}
+.feature-art-content i{display:block;background:#e1c5a0;width:64px;height:1px}
+.feature-art .image-caption{z-index:2;text-align:left;text-shadow:none;color:#e2d2bc}
+@media(max-width:1100px){
+ .venue-art-name{font-size:clamp(36px,4vw,59px)}
+ .venue-art-gaslight .venue-art-name{font-size:clamp(35px,4vw,55px)}
+ .hero-brand-gaslight .hero-identity{font-size:clamp(28px,3.3vw,55px)}
+}
+@media(max-width:760px){
+ .hero-brand-panel .hero-identity{inset:12% 8% 35%;font-size:clamp(29px,7vw,52px)}
+ .hero-brand-higo .hero-identity{font-size:clamp(39px,9vw,60px)}
+ .hero-brand-gaslight .hero-identity{font-size:clamp(25px,6vw,43px)}
+ .venue-art-name,.venue-art-higo .venue-art-name{font-size:clamp(62px,10vw,85px)}
+ .venue-art-gaslight .venue-art-name{font-size:clamp(52px,9vw,77px)}
+ .feature-art-content>strong,.feature-art-gaslight .feature-art-content>strong{font-size:clamp(64px,15vw,104px)}
+ .feature-art .image-caption{left:24px;bottom:19px}
+}
+@media(max-width:390px){
+ .hero-brand-gaslight .hero-identity{font-size:24px}
+ .hero-brand-higo .hero-identity{font-size:37px}
+ .feature-art-content>strong,.feature-art-gaslight .feature-art-content>strong{font-size:63px}
+}
