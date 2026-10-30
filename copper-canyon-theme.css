@@ -140,3 +140,15 @@
  .cc-site .cc-hero h1{font-size:55px}
  .cc-brand-plate-small{width:67px;height:64px;top:38px;right:0}
 }
+
+/* Presentation photography: all imagery below is original Copper Canyon media
+   downloaded from the restaurant's former site and hosted locally in this repo. */
+.cc-site .cc-hero-photo img{object-position:center 47%;filter:saturate(.83) contrast(1.03)}
+.cc-site .cc-menu-visual img{object-position:center center;filter:saturate(.92)}
+.cc-site .cc-drinks-image img{object-position:center center;filter:saturate(.92)}
+.cc-site .cc-gallery-grid{grid-template-rows:repeat(3,230px)}
+.cc-site .cc-gallery-tile img{filter:saturate(.94)}
+@media(max-width:760px){
+ .cc-site .cc-hero-photo img{object-position:58% center}
+ .cc-site .cc-gallery-grid{grid-template-rows:220px;grid-auto-rows:180px}
+}
