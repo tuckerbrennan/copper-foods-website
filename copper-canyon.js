@@ -19,14 +19,6 @@
 
   function openLightbox(button) {
     returnFocusTo = button;
-    image.onerror = function () {
-      const fallback = button.dataset.fallback;
-      if (fallback && image.src !== fallback) {
-        image.onerror = null;
-        image.src = fallback;
-        image.alt = "Temporary illustrative image; original Copper Canyon photo unavailable";
-      }
-    };
     image.src = button.dataset.image;
     image.alt = button.dataset.alt || "Gallery photograph";
     lightbox.hidden = false;
