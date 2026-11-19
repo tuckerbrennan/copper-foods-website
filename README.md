@@ -66,13 +66,18 @@ redirects with Michael before switching that domain.
 
 ## Copper Foods landing page
 
-The umbrella landing page is `index.html`. Its staging destination is
-`/copper-foods/index.html` on Higo staging. Publish `landing.css`,
-`assets/higo/table.webp`, and the existing ordering page and its styles
-alongside it. The staging file carries a noindex tag and uses the Higo
-staging URL for its restaurant link.
+The temporary landing hostname is `copperfoods.higolounge.com`. Use a separate
+stack with `infra/copper-canyon-staging.json` in `us-east-1`. Set `PreviewDomain`
+to `copperfoods.higolounge.com` and `RootDocument` to `index.html`, and supply
+the public Higo hosted zone ID and staging response headers policy ID. Keep
+the existing Copper Canyon staging stack on its current hostname.
 
-As of November 19, 2026, `copperfoods.com` serves the Copper Cellar Family of
-Restaurants. Confirm domain ownership or choose an available launch domain
-before changing DNS. On production, use the final restaurant URLs and remove
-the staging-only crawl directive.
+Publish `index.html`, `landing.css`, `order-online.html`, `ordering.css`,
+`styles.css`, `copper-foods-presentation.css`, `app.js`, and `robots.txt`,
+along with the photo files referenced by the landing page. The landing page
+links to the three existing restaurant staging sites.
+
+The planned public domain is `copperfoodsnj.com`. When it is ready, point the
+public site links to the final restaurant domains and remove the temporary
+site's noindex policy on the new production hostname. Set up HTTPS and
+redirect the temporary hostname after verifying the new site.

@@ -1,8 +1,9 @@
 {
   "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "Copper Canyon staging site hosted on a subdomain of higolounge.com.",
+  "Description": "Copper Foods static website hosted on a subdomain of higolounge.com.",
   "Parameters": {
     "PreviewDomain": {"Type": "String", "Default": "staging.coppercanyon.higolounge.com"},
+    "RootDocument": {"Type": "String", "Default": "copper-canyon.html", "AllowedValues": ["copper-canyon.html", "index.html"]},
     "HostedZoneId": {"Type": "AWS::Route53::HostedZone::Id"},
     "ResponseHeadersPolicyId": {"Type": "String"}
   },
@@ -42,7 +43,7 @@
         "DistributionConfig": {
           "Enabled": true,
           "Aliases": [{"Ref": "PreviewDomain"}],
-          "DefaultRootObject": "copper-canyon.html",
+          "DefaultRootObject": {"Ref": "RootDocument"},
           "PriceClass": "PriceClass_100",
           "HttpVersion": "http2and3",
           "ViewerCertificate": {"AcmCertificateArn": {"Ref": "Certificate"}, "SslSupportMethod": "sni-only", "MinimumProtocolVersion": "TLSv1.2_2021"},
