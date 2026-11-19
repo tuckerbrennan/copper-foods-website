@@ -1,0 +1,45 @@
+.shared-menu-photos {
+  display: grid;
+  gap: 24px;
+  max-width: 840px;
+  margin: 28px auto 56px;
+}
+
+.shared-menu-photos[hidden], [data-menu-fallback][hidden] { display: none !important; }
+.shared-menu-photos a { display: block; }
+.shared-menu-photos img { display: block; width: 100%; height: auto; border-radius: 8px; }
+.shared-menu-photos figure { margin: 0; }
+
+.gaslight-page {
+  background: #fcf0d7;
+  color: #1c4635;
+}
+
+.gaslight-menu {
+  width: min(880px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 36px 0 72px;
+}
+
+.gaslight-menu h1 {
+  margin: 28px 0 6px;
+  font-size: clamp(54px, 10vw, 106px);
+  line-height: 1;
+}
+
+.gaslight-menu h2 { margin: 40px 0 12px; }
+.gaslight-menu a { text-decoration: underline; text-underline-offset: .2em; }
+.gaslight-menu .gaslight-social { display: flex; gap: 24px; flex-wrap: wrap; }
+.gaslight-menu .gaslight-social a { display: inline-flex; align-items: center; min-height: 44px; }
+
+.reviewed-menu-items { margin: 12px 0 20px; }
+.reviewed-menu-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 5px 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid currentColor;
+}
+.reviewed-menu-item dt { font-weight: 600; }
+.reviewed-menu-item dd { margin: 0; }
+.reviewed-menu-description { grid-column: 1 / -1; }

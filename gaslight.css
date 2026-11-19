@@ -1,0 +1,115 @@
+:root {
+  color-scheme: light;
+  --cream: #f9efdc;
+  --ink: #203931;
+  --amber: #f5ca85;
+  --brick: #a34730;
+  --border: #20393138;
+}
+
+* { box-sizing: border-box; }
+html { scroll-padding-top: 24px; }
+.gaslight-site {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font: 1rem/1.55 system-ui, sans-serif;
+}
+.gaslight-site a { color: inherit; }
+.gaslight-site a:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+.gl-shell { width: min(1100px, calc(100% - 40px)); margin-inline: auto; }
+.gl-skip { position: absolute; left: 20px; z-index: 2; transform: translateY(-150%); background: var(--cream); padding: 10px; }
+.gl-skip:focus { transform: none; }
+.gl-header { border-bottom: 1px solid var(--border); }
+.gl-header-inner, .gl-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 24px;
+  flex-wrap: wrap;
+  min-height: 74px;
+}
+.gl-wordmark { font: 700 clamp(23px, 4vw, 34px)/1 Georgia, serif; letter-spacing: -.05em; text-decoration: none; }
+.gl-header nav, .gl-actions { display: flex; gap: 10px clamp(12px, 3vw, 24px); flex-wrap: wrap; }
+.gl-header nav a { padding-block: 10px; text-decoration: none; font-weight: 650; }
+.gl-header nav a:hover, .gl-footer a:hover { text-decoration: underline; text-underline-offset: 5px; }
+.gl-hero { background: var(--ink); color: var(--cream); overflow: hidden; }
+.gl-hero-inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
+  gap: 24px;
+  align-items: center;
+  padding-block: clamp(48px, 9vw, 116px);
+}
+.gl-hero-copy { position: relative; z-index: 1; }
+.gl-location { color: var(--amber); font-size: .8rem; letter-spacing: .13em; text-transform: uppercase; }
+.gl-hero h1 {
+  margin: 4px 0 14px;
+  font: italic 700 clamp(62px, 11.8vw, 144px)/.96 Georgia, serif;
+  letter-spacing: -.085em;
+}
+.gl-lede { max-width: 24ch; font-size: clamp(1.18rem, 3vw, 1.6rem); margin: 0 0 24px; }
+.gl-button, .gl-text-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  min-height: 46px;
+  font-weight: 700;
+}
+.gl-button { padding: 9px 14px; border-radius: 6px; border: 1px solid var(--cream); text-decoration: none; }
+.gaslight-site .gl-button-light { background: var(--amber); color: #251b15; border-color: var(--amber); }
+.gl-button:hover { text-decoration: underline; text-underline-offset: 4px; }
+.gl-art { display: grid; place-items: center; }
+.gl-record {
+  width: min(32vw, 360px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: repeating-radial-gradient(circle, #202421 0 6px, #303731 7px 8px, #292d29 9px 13px);
+  border: 1px solid #f9efdc80;
+  box-shadow: 0 0 0 14px #f5ca8520, 0 18px 32px #10131066;
+  display: grid;
+  place-items: center;
+  transform: rotate(-13deg);
+}
+.gl-record-label {
+  width: 36%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--ink) 0 6%, var(--amber) 7% 38%, var(--brick) 39% 57%, var(--amber) 58%);
+}
+.gl-section { padding-block: clamp(38px, 7vw, 76px); }
+.gl-section h2 { font: 700 clamp(30px, 6vw, 50px)/1.05 Georgia, serif; letter-spacing: -.04em; margin: 0 0 12px; }
+.gl-section p { margin: 0 0 14px; }
+.gl-menu-section, .gl-visit { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 20px 40px; }
+.gl-shows { padding-inline: clamp(18px, 5vw, 52px); background: var(--brick); color: var(--cream); border-radius: 16px; }
+.gl-calendar { list-style: none; padding: 0; margin: 20px 0; }
+.gl-calendar li { display: grid; grid-template-columns: minmax(100px, .34fr) minmax(0, 1fr) auto; gap: 8px 18px; align-items: center; padding: 14px 0; border-top: 1px solid #f9efdc70; }
+.gl-calendar li[hidden], .gl-calendar[hidden] { display: none; }
+.gl-calendar time { color: var(--amber); font-weight: 750; }
+.gl-calendar h3, .gl-calendar p { margin: 0; }
+.gl-calendar a { min-height: 44px; display: inline-flex; align-items: center; text-underline-offset: 4px; }
+.gl-photos { border-bottom: 1px solid var(--border); }
+.gl-photo-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 20px 0 10px; }
+.gl-photo-grid a { display: block; aspect-ratio: 1; border-radius: 12px; background: var(--ink); overflow: hidden; }
+.gl-photo-grid img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.gl-visit address { font-style: normal; }
+.gl-visit-links { display: grid; justify-items: start; align-content: start; }
+.gl-text-link { text-underline-offset: 5px; }
+.gl-footer { border-top: 1px solid var(--border); }
+.gaslight-site .shared-menu-photos { margin: 0; }
+.gaslight-site .shared-menu-photos h2 { font-size: 1.45rem; }
+@media (max-width: 700px) {
+  .gl-hero-inner, .gl-menu-section, .gl-visit { grid-template-columns: minmax(0, 1fr); }
+  .gl-art { display: none; }
+}
+@media (max-width: 520px) {
+  .gl-calendar li { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  .gl-photo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .gl-photo-grid a:first-child { grid-column: 1 / -1; aspect-ratio: 4 / 3; }
+}
+@media (max-width: 360px) {
+  .gl-shell { width: calc(100% - 28px); }
+  .gl-header nav { gap: 12px; }
+}

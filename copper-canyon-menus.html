@@ -16,6 +16,8 @@
  <link rel="stylesheet" href="copper-canyon-theme.css">
  <script src="app.js" defer></script>
  <script src="copper-canyon-menus.js" defer></script>
+ <script type="module" src="shared-menu.js"></script>
+ <link rel="stylesheet" href="shared-menu.css">
 </head>
 <body class="cc-menu-site">
 <a class="skip-link" href="#main">Skip to menus</a>
@@ -39,7 +41,8 @@
   <div class="digital-hero-sun" aria-hidden="true">✳</div>
  </div>
 </section>
-<div class="digital-menu-tools" id="menu-navigation">
+<section class="section-shell shared-menu-photos" data-shared-menu="copper-canyon" aria-label="Current Copper Canyon menu" hidden></section>
+<div class="digital-menu-tools" id="menu-navigation" data-menu-fallback>
  <div class="section-shell digital-menu-tools-inner">
   <nav class="digital-menu-nav" aria-label="Choose a menu">
    <a href="#lunch" class="digital-menu-link" aria-controls="lunch" aria-current="page">Lunch <span class="digital-menu-link-meta">MON–FRI</span></a>
@@ -49,7 +52,7 @@
   <div class="digital-menu-tools-cta"><a href="tel:+17322918444"><span aria-hidden="true">☎</span> Call us</a></div>
  </div>
 </div>
-<section class="menu-area section-shell" aria-label="Restaurant menus">
+<section class="menu-area section-shell" aria-label="Restaurant menus" data-menu-fallback>
  <p class="menu-preview-note"><strong>Menus &amp; prices</strong> · Subject to change. Please ask your server about current availability.</p>
  <section class="menu-panel" id="lunch" aria-labelledby="lunch-heading">
  <div class="menu-panel-heading"><div><p class="eyebrow">Monday–Friday · Noon–4 PM</p><h2 id="lunch-heading">The lunch menu.</h2><p>An inviting midday lineup of small plates, fresh salads, tacos, fajitas, quesadillas and more.</p></div><span class="menu-panel-medallion" aria-hidden="true">☀</span></div>

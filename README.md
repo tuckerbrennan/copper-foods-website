@@ -50,3 +50,16 @@ Deployment is asynchronous; Pages URLs may briefly show an old version while the
 4. Add separate pages for Higo and Gaslight, plus an events listing.
 5. Verify links, hours, and calls to action.
 6. Obtain Michael's approval before any restaurant-domain cutover.
+
+## Copper Canyon staging
+
+The preview domain is `staging.coppercanyon.higolounge.com`. The dedicated AWS
+stack is defined in `infra/copper-canyon-staging.json` and runs in `us-east-1`
+for its CloudFront certificate. Its default page is `copper-canyon.html`.
+Publish the static site pages, scripts, styles, `assets/copper-canyon/`, and
+`data/` to the stack’s site bucket. Keep the preview out of search indexing.
+
+The public menu script reads the shared Copper Foods menu API. The staging
+origin is allowed by that API alongside Higo staging. For legacy links on
+`thecoppercanyon.com`, inventory the current URLs and coordinate DNS and any
+redirects with Michael before switching that domain.
