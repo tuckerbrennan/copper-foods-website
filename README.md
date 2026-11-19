@@ -63,3 +63,16 @@ The public menu script reads the shared Copper Foods menu API. The staging
 origin is allowed by that API alongside Higo staging. For legacy links on
 `thecoppercanyon.com`, inventory the current URLs and coordinate DNS and any
 redirects with Michael before switching that domain.
+
+## Copper Foods landing page
+
+The umbrella landing page is `index.html`. Its staging destination is
+`/copper-foods/index.html` on Higo staging. Publish `landing.css`,
+`assets/higo/table.webp`, and the existing ordering page and its styles
+alongside it. The staging file carries a noindex tag and uses the Higo
+staging URL for its restaurant link.
+
+As of November 19, 2026, `copperfoods.com` serves the Copper Cellar Family of
+Restaurants. Confirm domain ownership or choose an available launch domain
+before changing DNS. On production, use the final restaurant URLs and remove
+the staging-only crawl directive.
