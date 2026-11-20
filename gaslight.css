@@ -113,3 +113,29 @@ html { scroll-padding-top: 24px; }
   .gl-shell { width: calc(100% - 28px); }
   .gl-header nav { gap: 12px; }
 }
+
+.gl-tap-list { max-width: 42rem; margin: 1rem 0; }
+.gl-tap-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: .25rem 1rem;
+  padding: .8rem 0;
+  border-bottom: 1px solid currentColor;
+  break-inside: avoid;
+}
+.gl-tap-row dt { font-weight: bold; }
+.gl-tap-row dd { margin: 0; }
+.gl-tap-details { grid-column: 1 / -1; }
+.gl-tap-print-only { display: none; }
+.gl-print-taps .gl-tap-print-only { display: block; }
+.gl-tap-qr { margin: 1.5rem 0; }
+.gl-tap-qr img { display: block; }
+.gl-print-taps > :not(main),
+.gl-print-taps main > :not(.gl-shell),
+.gl-print-taps main > .gl-shell > :not(#on-tap) { display: none; }
+@media print {
+  .gl-print-taps { color: #000; background: #fff; }
+  .gl-print-taps .gl-shell { width: 100%; max-width: none; }
+  .gl-print-taps #on-tap { padding: 0; border: 0; }
+  .gl-print-taps #gl-print-taps { display: none; }
+}
