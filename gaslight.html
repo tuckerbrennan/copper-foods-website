@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="gaslight.css">
   <script type="module" src="shared-menu.js"></script>
   <script type="module" src="gaslight-calendar.js"></script>
+  <script type="module" src="gaslight-on-tap.js"></script>
   <link rel="stylesheet" href="website-gallery.css">
   <script type="module" src="website-gallery.js"></script>
 </head>
@@ -21,6 +22,7 @@
     <a class="gl-wordmark" href="gaslight.html" aria-label="Gaslight home">Gaslight</a>
     <nav aria-label="Gaslight">
       <a href="#menu">Menu</a>
+      <a href="#on-tap">On Tap</a>
       <a href="#shows">Shows</a>
       <a href="#photos">Photos</a>
       <a href="#visit">Visit</a>
@@ -53,6 +55,19 @@
       <div>
         <div class="shared-menu-photos" data-shared-menu="gaslight" aria-label="Published Gaslight menu" hidden></div>
         <a class="gl-text-link" data-menu-fallback href="https://linktr.ee/gaslight33">Open Gaslight’s menu <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+    <section id="on-tap" class="gl-section" aria-labelledby="tap-title">
+      <p class="gl-tap-print-only">Gaslight · Atlantic Highlands, NJ</p>
+      <h2 id="tap-title">On Tap</h2>
+      <p id="gl-tap-status" role="status">Loading the tap list…</p>
+      <dl id="gl-tap-list" class="gl-tap-list" hidden></dl>
+      <div class="gl-tap-print-only">
+        <figure class="gl-tap-qr">
+          <img src="assets/gaslight/on-tap-qr-staging.svg" width="120" height="120" alt="Gaslight On Tap QR code">
+          <figcaption>Scan for the current tap list</figcaption>
+        </figure>
+        <button class="gl-button gl-button-light" id="gl-print-taps" type="button" disabled>Print tap menu</button>
       </div>
     </section>
     <section id="shows" class="gl-section gl-shows" aria-labelledby="shows-title">
