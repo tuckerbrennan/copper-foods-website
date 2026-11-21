@@ -152,3 +152,14 @@
  .cc-site .cc-hero-photo img{object-position:58% center}
  .cc-site .cc-gallery-grid{grid-template-rows:220px;grid-auto-rows:180px}
 }
+
+.cc-hero .cc-hero-content h1 { max-width: 17ch; font-size: clamp(54px, 6.3vw, 88px); text-wrap: balance; }
+.cc-hero .cc-hero-cta { display: flex; flex-wrap: wrap; gap: 10px; }
+.cc-hero .cc-hero-meta { display: flex; flex-wrap: wrap; gap: 8px 22px; }
+.cc-hero .cc-hero-meta a { text-decoration: underline; text-underline-offset: 4px; }
+@media (max-width: 700px) {
+  .cc-site .cc-hero, .cc-site .cc-hero-content { min-height: 0; }
+  .cc-site .cc-hero-content { padding-block: 44px; }
+  .cc-hero .cc-hero-content h1 { font-size: clamp(40px, 9vw, 64px); }
+  .cc-hero .cc-hero-cta .button { justify-content: center; min-height: 46px; }
+}

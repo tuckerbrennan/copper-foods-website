@@ -61,24 +61,9 @@ html { scroll-padding-top: 24px; }
 .gl-button { padding: 9px 14px; border-radius: 6px; border: 1px solid var(--cream); text-decoration: none; }
 .gaslight-site .gl-button-light { background: var(--amber); color: #251b15; border-color: var(--amber); }
 .gl-button:hover { text-decoration: underline; text-underline-offset: 4px; }
-.gl-art { display: grid; place-items: center; }
-.gl-record {
-  width: min(32vw, 360px);
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: repeating-radial-gradient(circle, #202421 0 6px, #303731 7px 8px, #292d29 9px 13px);
-  border: 1px solid #f9efdc80;
-  box-shadow: 0 0 0 14px #f5ca8520, 0 18px 32px #10131066;
-  display: grid;
-  place-items: center;
-  transform: rotate(-13deg);
-}
-.gl-record-label {
-  width: 36%;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: radial-gradient(circle, var(--ink) 0 6%, var(--amber) 7% 38%, var(--brick) 39% 57%, var(--amber) 58%);
-}
+
+
+
 .gl-section { padding-block: clamp(38px, 7vw, 76px); }
 .gl-section h2 { font: 700 clamp(30px, 6vw, 50px)/1.05 Georgia, serif; letter-spacing: -.04em; margin: 0 0 12px; }
 .gl-section p { margin: 0 0 14px; }
@@ -102,7 +87,7 @@ html { scroll-padding-top: 24px; }
 .gaslight-site .shared-menu-photos h2 { font-size: 1.45rem; }
 @media (max-width: 700px) {
   .gl-hero-inner, .gl-menu-section, .gl-visit { grid-template-columns: minmax(0, 1fr); }
-  .gl-art { display: none; }
+
 }
 @media (max-width: 520px) {
   .gl-calendar li { grid-template-columns: minmax(0, 1fr); gap: 4px; }
@@ -138,4 +123,18 @@ html { scroll-padding-top: 24px; }
   .gl-print-taps .gl-shell { width: 100%; max-width: none; }
   .gl-print-taps #on-tap { padding: 0; border: 0; }
   .gl-print-taps #gl-print-taps { display: none; }
+}
+
+.gl-hero-photo { margin: 0; min-width: 0; }
+.gl-hero-photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.gl-header nav a { min-height: 44px; display: inline-flex; align-items: center; }
+@media (max-width: 600px) {
+  .gl-header nav { gap: 0 16px; }
+  .gl-hero-photo img { aspect-ratio: 16 / 10; }
 }
