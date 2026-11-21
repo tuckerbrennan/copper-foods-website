@@ -48,7 +48,7 @@ jobs:
           targets = {
               'staging.coppercanyon.higolounge.com': (
                   'copper-canyon-staging-site-zzn7uhkcmleq', 'E105E1EY73GLS9',
-                  ('copper-canyon-theme.css', 'copper-canyon-menus.html', 'order-online.html'),
+                  ('copper-canyon-theme.css', 'copper-canyon-menus.html'),
               ),
               'copperfoods.higolounge.com': (
                   'copper-foods-landing-site-wy3ftimrj26t', 'E138ZKED98HCSQ',
@@ -156,7 +156,6 @@ jobs:
               for (const url of [
                 'https://staging.coppercanyon.higolounge.com/',
                 'https://staging.coppercanyon.higolounge.com/copper-canyon-menus.html',
-                'https://staging.coppercanyon.higolounge.com/order-online.html',
                 'https://copperfoods.higolounge.com/',
                 'https://copperfoods.higolounge.com/order-online.html',
               ]) {
