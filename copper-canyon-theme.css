@@ -165,7 +165,8 @@
 }
 
 @media (min-width: 761px) and (max-width: 900px) {
-  .cc-site .header-inner { gap: 20px; }
-  .cc-site .desktop-nav { gap: 16px; }
+  .cc-site .header-inner, .cc-menu-site .header-inner { gap: 16px; }
+  .cc-site .desktop-nav, .cc-menu-site .desktop-nav { gap: 6px 14px; flex-wrap: wrap; }
+  .cc-site .header-cta, .cc-menu-site .header-cta { flex-shrink: 0; }
   .cc-site .cc-hours { grid-template-columns: minmax(0, 1fr) auto; padding-right: 0; }
 }
