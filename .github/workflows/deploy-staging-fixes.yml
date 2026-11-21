@@ -1,0 +1,187 @@
+name: Publish Copper staging fixes
+
+on:
+  push:
+    branches: [requirements-staging]
+    paths: [.github/workflows/deploy-staging-fixes.yml]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+  statuses: write
+
+concurrency:
+  group: copper-staging-deploy
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/requirements-staging'
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    steps:
+      - name: Record release start
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/$GITHUB_REPOSITORY/statuses/$GITHUB_SHA" -f state=pending -f context=copper/staging-release -f target_url="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" --silent
+      - name: Install browser for live verification
+        run: |
+          npm install --prefix /tmp/copper-staging-check playwright
+          /tmp/copper-staging-check/node_modules/.bin/playwright install --with-deps chromium
+      - name: Authenticate to AWS
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::242088067567:role/CopperFoodsStagingDeploy
+          aws-region: us-east-1
+          allowed-account-ids: '242088067567'
+      - name: Publish and verify staging files
+        run: |
+          python3 - <<'PY'
+          import json
+          import re
+          import subprocess
+          import tempfile
+          import urllib.request
+          from pathlib import Path
+
+          targets = {
+              'staging.coppercanyon.higolounge.com': (
+                  'copper-canyon-staging-site-zzn7uhkcmleq', 'E105E1EY73GLS9',
+                  ('copper-canyon-theme.css', 'copper-canyon-menus.html', 'order-online.html'),
+              ),
+              'copperfoods.higolounge.com': (
+                  'copper-foods-landing-site-wy3ftimrj26t', 'E138ZKED98HCSQ',
+                  ('order-online.html',),
+              ),
+          }
+          approved_css = ".cc-site .cc-lunch .eyebrow{color:#301c16}\n.cc-site .cc-hours span,.cc-site .cc-visit-grid .cc-fineprint{color:#514039}\n@media (min-width: 761px) and (max-width: 900px) {\n  .cc-site .header-inner, .cc-menu-site .header-inner { gap: 16px; }\n  .cc-site .desktop-nav, .cc-menu-site .desktop-nav { gap: 6px 14px; flex-wrap: wrap; }\n  .cc-site .header-cta, .cc-menu-site .header-cta { flex-shrink: 0; }\n  .cc-site .cc-hours { grid-template-columns: minmax(0, 1fr) auto; padding-right: 0; }\n}"
+
+          def aws(*args):
+              return json.loads(subprocess.check_output(
+                  ['aws', *args, '--output', 'json'], text=True
+              ))
+
+          def public(host, key):
+              request = urllib.request.Request(
+                  f'https://{host}/{key}', headers={'User-Agent': 'Mozilla/5.0'}
+              )
+              with urllib.request.urlopen(request, timeout=30) as response:
+                  if key.endswith('.html') and 'noindex' not in response.headers.get('X-Robots-Tag', '').lower():
+                      raise ValueError(f'Missing noindex response header on {host}/{key}')
+                  return response.read()
+
+          def patch(key, content):
+              if key.endswith('.css'):
+                  if '.cc-site' not in content or '.cc-menu-site' not in content:
+                      raise ValueError('Unexpected Copper Canyon theme stylesheet')
+                  if approved_css not in content:
+                      content += '\n\n/* Copper Canyon responsive layout and contrast fixes */\n' + approved_css + '\n'
+                  return content
+              if re.search(r"<meta[^>]+name=['\"]robots['\"][^>]*noindex", content, re.I):
+                  return content
+              content, matches = re.subn(
+                  r'<head>', '<head>\n  <meta name="robots" content="noindex,nofollow">',
+                  content, count=1, flags=re.I
+              )
+              if not matches:
+                  raise ValueError(f'Missing document head on {key}')
+              return content
+
+          def invalidate(host, paths):
+              distribution = targets[host][1]
+              invalidation = aws('cloudfront', 'create-invalidation', '--distribution-id',
+                                 distribution, '--paths', *paths)['Invalidation']['Id']
+              subprocess.run(['aws', 'cloudfront', 'wait', 'invalidation-completed',
+                              '--distribution-id', distribution, '--id', invalidation], check=True)
+
+          def put(host, key, file, meta):
+              bucket = targets[host][0]
+              args = ['s3api', 'put-object', '--bucket', bucket, '--key', key, '--body', str(file)]
+              for field, option in [('ContentType', '--content-type'), ('CacheControl', '--cache-control'),
+                                    ('ContentDisposition', '--content-disposition'),
+                                    ('ContentLanguage', '--content-language')]:
+                  if meta.get(field):
+                      args.extend([option, meta[field]])
+              if meta.get('Metadata'):
+                  args.extend(['--metadata', json.dumps(meta['Metadata'])])
+              aws(*args)
+
+          with tempfile.TemporaryDirectory() as directory:
+              records = {}
+              modified = {}
+              for host, (bucket, _, keys) in targets.items():
+                  for key in keys:
+                      i = len(records)
+                      original = Path(directory) / f'{i}-original'
+                      updated = Path(directory) / f'{i}-updated'
+                      metadata = aws('s3api', 'get-object', '--bucket', bucket, '--key', key, str(original))
+                      if metadata.get('ContentEncoding', 'identity') != 'identity':
+                          raise ValueError(f'Unexpected content encoding on {host}/{key}')
+                      if public(host, key) != original.read_bytes():
+                          raise ValueError(f'Staging cache and origin disagree on {host}/{key}')
+                      updated.write_text(patch(key, original.read_text(encoding='utf-8')), encoding='utf-8')
+                      records[(host, key)] = original, updated, metadata
+
+              def refresh_changed():
+                  for host, keys in modified.items():
+                      invalidate(host, ['/' + key + ('*' if key.endswith('.css') else '') for key in keys])
+
+              try:
+                  for (host, key), (original, updated, metadata) in records.items():
+                      if original.read_bytes() != updated.read_bytes():
+                          put(host, key, updated, metadata)
+                          modified.setdefault(host, []).append(key)
+                  refresh_changed()
+                  for (host, key), (_, updated, _) in records.items():
+                      if public(host, key) != updated.read_bytes():
+                          raise ValueError(f'Live file differs from approved content on {host}/{key}')
+                      print(f'VERIFIED https://{host}/{key}', flush=True)
+              except Exception:
+                  for host, keys in modified.items():
+                      for key in keys:
+                          original, _, metadata = records[(host, key)]
+                          put(host, key, original, metadata)
+                  refresh_changed()
+                  raise
+          PY
+      - name: Verify phone and tablet layouts
+        run: |
+          cat > /tmp/copper-staging-check/check.cjs <<'JS'
+          const { chromium } = require('playwright');
+          (async () => {
+            const browser = await chromium.launch();
+            try {
+              const page = await browser.newPage({ reducedMotion: 'reduce' });
+              for (const url of [
+                'https://staging.coppercanyon.higolounge.com/',
+                'https://staging.coppercanyon.higolounge.com/copper-canyon-menus.html',
+                'https://staging.coppercanyon.higolounge.com/order-online.html',
+                'https://copperfoods.higolounge.com/',
+                'https://copperfoods.higolounge.com/order-online.html',
+              ]) {
+                for (const width of [390, 768]) {
+                  await page.setViewportSize({ width, height: 900 });
+                  const response = await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 });
+                  await page.evaluate(() => document.fonts.ready);
+                  const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
+                  const noindex = response.headers()['x-robots-tag']?.toLowerCase().includes('noindex');
+                  console.log(`LIVE ${url} ${width}px status=${response.status()} noindex=${noindex} overflow=${overflow}`);
+                  if (!response.ok() || !noindex || overflow > 2) throw new Error(`Live staging check failed for ${url} at ${width}px`);
+                }
+              }
+            } finally {
+              await browser.close();
+            }
+          })().catch(error => { console.error(error.message); process.exitCode = 1; });
+          JS
+          node /tmp/copper-staging-check/check.cjs
+      - name: Record release result
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          JOB_STATUS: ${{ job.status }}
+        run: |
+          state=failure
+          if [ "$JOB_STATUS" = success ]; then state=success; fi
+          gh api --method POST "repos/$GITHUB_REPOSITORY/statuses/$GITHUB_SHA" -f state="$state" -f context=copper/staging-release -f target_url="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" --silent
