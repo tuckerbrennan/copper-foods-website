@@ -41,7 +41,7 @@
 .cc-site .cc-button-outline{background:rgba(44,24,21,.3)}
 .cc-site .cc-button-outline:hover{background:rgba(255,235,210,.15)}
 .cc-site .cc-lunch{background:#c28e75;color:#211817;border-top:1px solid #b37865;border-bottom:1px solid #b37865}
-.cc-site .cc-lunch .eyebrow{color:#50291f}
+.cc-site .cc-lunch .eyebrow{color:#301c16}
 .cc-site .cc-sun{color:#64352c}
 .cc-site .cc-lunch h2 em{color:#643a31}
 .cc-site .cc-intro .eyebrow{color:#8d4a40}
@@ -72,7 +72,7 @@
 .cc-site .cc-events .cc-events-note{color:#dcc2af}
 .cc-site .cc-visit-grid .eyebrow{color:#99574a}
 .cc-site .cc-visit-grid p{color:#766157}
-.cc-site .cc-visit-grid .cc-fineprint{color:#8b7b71}
+.cc-site .cc-hours span,.cc-site .cc-visit-grid .cc-fineprint{color:#514039}
 .cc-site .cc-visit-grid h3 a:hover,.cc-site .cc-socials a:hover{color:#954f43}
 .cc-site .cc-takeout-row p{color:#6c5b53}
 .cc-site .cc-lightbox{background:rgba(29,15,13,.95)}
@@ -162,4 +162,10 @@
   .cc-site .cc-hero-content { padding-block: 44px; }
   .cc-hero .cc-hero-content h1 { font-size: clamp(40px, 9vw, 64px); }
   .cc-hero .cc-hero-cta .button { justify-content: center; min-height: 46px; }
+}
+
+@media (min-width: 761px) and (max-width: 900px) {
+  .cc-site .header-inner { gap: 20px; }
+  .cc-site .desktop-nav { gap: 16px; }
+  .cc-site .cc-hours { grid-template-columns: minmax(0, 1fr) auto; padding-right: 0; }
 }
