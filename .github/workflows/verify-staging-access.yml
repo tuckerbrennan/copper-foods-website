@@ -1,0 +1,24 @@
+name: Check staging deploy configuration
+on:
+  push:
+    branches: [verify-staging-deploy-access]
+permissions:
+  contents: read
+  statuses: write
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check for configured AWS staging roles
+        env:
+          REPOSITORY_VARIABLES: ${{ toJSON(vars) }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if python3 -c 'import json, os, re, sys; values = json.loads(os.environ["REPOSITORY_VARIABLES"]); sys.exit(not any(re.fullmatch(r"arn:aws:iam::[0-9]{12}:role/.+", str(v)) for v in values.values()))'; then
+            description='AWS role configuration is available'
+            state=success
+          else
+            description='Copper Foods repository has no configured AWS role'
+            state=failure
+          fi
+          gh api --method POST "repos/$GITHUB_REPOSITORY/statuses/$GITHUB_SHA" -f state="$state" -f description="$description" -f context=copper/staging-access -f target_url="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" --silent
